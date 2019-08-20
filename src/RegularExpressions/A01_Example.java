@@ -5,11 +5,16 @@ import java.util.regex.Pattern;
 
 public class A01_Example {
     public static void main(String[] args) {
-//        Пакет regex состоит всего из трех классов:
-//        Pattern - скомпилированное представление регулярного выражения.
-//           Для компиляции нужно вызвать статический метод compile.
-//        Matcher - движок, который производит операцию сравнения (match).
-//        PatternSyntaxException - указывает на синтаксическую ошибку в выражении.
+        /**
+         * Пакет regex состоит всего из трех классов:
+         * Pattern - скомпилированное представление регулярного выражения.
+         *    Для компиляции нужно вызвать статический метод compile().
+         * Matcher - движок, который производит операцию сравнения (match).
+         *    Объект класса Matcher может быть получен путем вызова
+         *    метода matcher() на объекте класса Pattern.
+         * PatternSyntaxException - указывает на синтаксическую ошибку в выражении.
+         * Pattern, Matcher не содержит публичных конструкторов.
+         */
 
         System.out.println(checkWithRegExp("vovan"));
         System.out.println(dumbCheck("vovan"));
@@ -19,6 +24,7 @@ public class A01_Example {
         Pattern p = Pattern.compile("^[a-z0-9_-]{3,15}$");
         Matcher m = p.matcher(userNameString);
         return m.matches();
+//        return Pattern.compile("^[a-z0-9_-]{3,15}$").matcher(userNameString).matches();
     }
 
     private static boolean dumbCheck(String userNameString) {

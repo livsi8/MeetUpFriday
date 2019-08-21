@@ -21,7 +21,7 @@ public class A01_Example {
     }
 
     private static boolean checkWithRegExp(String userNameString) {
-        Pattern p = Pattern.compile("^[a-z0-9_-]{3,15}$");
+        Pattern p = Pattern.compile("^[a-z0-9_]{3,15}$");
         Matcher m = p.matcher(userNameString);
         return m.matches();
 //        return Pattern.compile("^[a-z0-9_-]{3,15}$").matcher(userNameString).matches();
@@ -39,7 +39,3 @@ public class A01_Example {
         return true;
     }
 }
-
-//        String num = "123456789";
-//        String str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-//        String num1 = "1 22 333 444 55555 666666 7777777 88888888 999999999 0000000000";

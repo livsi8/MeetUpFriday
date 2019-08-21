@@ -3,7 +3,7 @@ package RegularExpressions;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class A02_CollectionGroups {
+public class A03_CollectionGroups {
     public static void main(String[] args) {
         /** Группы сбора
          * Группы сбора представляют способ обращения с несколькими
@@ -38,8 +38,6 @@ public class A02_CollectionGroups {
             System.out.println("Найдено значение group(1): \"" + m.group(1) + "\"");
             System.out.println("Найдено значение group(2): \"" + m.group(2) + "\"");
             System.out.println("Найдено значение group(3): \"" + m.group(3) + "\"");
-//            System.out.println("Найдено значение group(4): \"" + m.group(4) + "\"");
-//            System.out.println("Найдено значение group(5): \"" + m.group(5) + "\"");
         }else {
             System.out.println("НЕ СОВПАДАЕТ");
         }

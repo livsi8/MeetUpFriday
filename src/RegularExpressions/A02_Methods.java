@@ -1,13 +1,15 @@
 package RegularExpressions;
 
+import java.io.Console;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 
 public class A02_Methods {
     public static void main(String[] args) {
         Pattern pattern = null;
         Matcher matcher = null;
-        /** Основные методы класса Pattern */
+        /* ~~~~~~~~~~~~~~~~ Основные методы класса Pattern ~~~~~~~~~~~~~~~~ */
 
         /** pattern()
          * возвращает исходное строковое представление регулярного выражения,
@@ -23,7 +25,14 @@ public class A02_Methods {
          */
         System.out.println(Pattern.matches("А.+а", "Алла"));                 //true
         System.out.println(Pattern.matches("А.+а", "Егор Алла Александр"));  //false
-
+        /**
+         * Оба метода matches и lookingAt направлены на попытку поиска соответствия
+         * вводимой последовательности с шаблоном. Разница, однако, заключается в
+         * том, что для метода matches требуется вся вводимая последовательность,
+         * в то время как lookingAt этого не требует.
+         */
+        matcher = Pattern.compile("Pro").matcher("ProgLang");
+        System.out.println("matcher.lookingAt() = " + matcher.lookingAt());               // true
 
         /** flags()
          * возвращает значения параметра flags шаблона, которые были установлены
@@ -57,7 +66,7 @@ public class A02_Methods {
 //        }
 
 
-        /** Основные методы класса Matcher */
+        /* ~~~~~~~~~~~~~~~~ Основные методы класса Matcher ~~~~~~~~~~~~~~~~ */
 
         /** рublic Matcher matcher(CharSequence input)
          * этот метод предусмотрен в классе Pattern для создания объекта Matcher.
@@ -92,5 +101,28 @@ public class A02_Methods {
 //        System.out.println(text);
 //        System.out.println(matcher.replaceFirst("Ира"));
 //        System.out.println(matcher.replaceAll("Ольга"));
+
+        /* ~~~~~~~ Основные методы класса PatternSyntaxException ~~~~~~~~~~~ */
+
+//        String regex = "***";
+//        PatternSyntaxException exc = null;
+//        try {
+//            Pattern.compile(regex);
+//        } catch (PatternSyntaxException e) {
+//
+//            System.out.println("~~~~~~~~~~~~~~~~~~");
+//            System.out.println("getDescription() Представляет описание ошибки:");
+//            System.out.println(e.getDescription());
+//            System.out.println("~~~~~~~~~~~~~~~~~~");
+//            System.out.println("getIndex() Представляет индекс ошибки:");
+//            System.out.println(e.getIndex());
+//            System.out.println("~~~~~~~~~~~~~~~~~~");
+//            System.out.println("getPattern() Представляет шаблон регулярного выражения, содержащего ошибку");
+//            System.out.println(e.getPattern());
+//            System.out.println("~~~~~~~~~~~~~~~~~~");
+//            System.out.println("getMessage() Производит возврат многострочной строки, содержащей описание синтаксической \nошибки и ее индекс, ошибочный образец регулярного выражения, \nа также визуальную индикацию индекса ошибки в шаблоне.");
+//            System.out.println(e.getMessage());
+//            System.out.println("~~~~~~~~~~~~~~~~~~");
+//        }
     }
 }

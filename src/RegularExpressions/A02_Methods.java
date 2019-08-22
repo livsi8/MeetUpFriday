@@ -23,16 +23,16 @@ public class A02_Methods {
          * позволяет проверить регулярное выражение, переданное в параметре
          * regex на соответствие тексту, переданному в параметре input.
          */
-        System.out.println(Pattern.matches("А.+а", "Алла"));                 //true
-        System.out.println(Pattern.matches("А.+а", "Егор Алла Александр"));  //false
+//        System.out.println(Pattern.matches("А.+а", "Алла"));                 //true
+//        System.out.println(Pattern.matches("А.+а", "Егор Алла Александр"));  //false
         /**
          * Оба метода matches и lookingAt направлены на попытку поиска соответствия
          * вводимой последовательности с шаблоном. Разница, однако, заключается в
          * том, что для метода matches требуется вся вводимая последовательность,
          * в то время как lookingAt этого не требует.
          */
-        matcher = Pattern.compile("Pro").matcher("ProgLang");
-        System.out.println("matcher.lookingAt() = " + matcher.lookingAt());               // true
+//        matcher = Pattern.compile("Pro").matcher("ProgLang");
+//        System.out.println("matcher.lookingAt() = " + matcher.lookingAt());               // true
 
         /** flags()
          * возвращает значения параметра flags шаблона, которые были установлены
@@ -101,6 +101,17 @@ public class A02_Methods {
 //        System.out.println(text);
 //        System.out.println(matcher.replaceFirst("Ира"));
 //        System.out.println(matcher.replaceAll("Ольга"));
+
+        /* Методы индексов */
+        /** public int start()
+         * Возврат начального индекса к предыдущему совпадению.
+         */
+        String str = "Егор Алла Александр Голованов";
+        Pattern p = Pattern.compile("А*а");
+        matcher = p.matcher(str);
+        while (matcher.find()) {
+            System.out.println("\"" + matcher.start() + "\"");
+        }
 
         /* ~~~~~~~ Основные методы класса PatternSyntaxException ~~~~~~~~~~~ */
 

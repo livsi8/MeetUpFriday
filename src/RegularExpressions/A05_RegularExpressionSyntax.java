@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class A05_RegularExpressionSyntax {
     public static void main(String[] args) {
         Pattern pattern = null;
-        /** Синтаксис регулярных выражений
+        /**
          * Синтаксис регулярных выражений основан на использовании символов
          * <([{\^-=$!|]})?*+.>, которые можно комбинировать с буквенными
          * символами. В зависимости от роли их можно разделить на несколько групп:
@@ -42,6 +42,9 @@ public class A05_RegularExpressionSyntax {
          * аналогичному алгоритму и далее повторяется вплоть до окончания текста.
          */
 //        pattern = Pattern.compile("А.+?а");
+
+
+
 
 
         Matcher matcher = pattern.matcher(str);

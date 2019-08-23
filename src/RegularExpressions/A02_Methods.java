@@ -31,7 +31,7 @@ public class A02_Methods {
          * в то время как lookingAt этого не требует.
          */
 //        matcher = Pattern.compile("Pro").matcher("ProgLang");
-//        System.out.println("matcher.lookingAt() = " + matcher.lookingAt());               // true
+//        System.out.println("matcher.lookingAt() = " + matcher.lookingAt());  // true
 
         /** flags()
          * возвращает значения параметра flags шаблона, которые были установлены

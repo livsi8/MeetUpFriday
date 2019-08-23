@@ -13,29 +13,38 @@ public class A06_Tasks {
 //        regEx = "[0-9]{3}\\.(\\d{2,3}|-)*";
 //        regEx = "\\d{3}\\.\\d{3}-\\d{2}-\\d{2}";
 
-
-        str = "http://host.com/parameters";
-        regEx = ".+";
+//        str = "http://host.com/parameters";
+//        regEx = ".+";
 //        regEx = "[htps]+://\\w{2,}.\\w+/\\w+";
 //
 
-        str = "email@gmail.com";
-        regEx = ".+";
+//        str = "email@gmail.com";
+//        regEx = ".+";
 //         regEx = "\\w+@\\w+.\\w+";
 //
 
         // hexidecimal color
-        str = "#aabbcc";
-        regEx = ".+";
+
+//        str = "#aabbcc";
+//        regEx = ".+";
 //        regEx = "#?[0-9A-Fa-f]{6}";
 //
 
 
-
-
-
-
-
+        /**
+         * Regex-инструменты для использования онлайн
+         * https://regexr.com/
+         * https://rubular.com/
+         * https://www.regexpal.com/
+         * http://www.regexplanet.com/
+         *
+         * Links:
+         * http://javascript.ru/basic/regular-expression
+         * http://proglang.su/java/regular-expressions
+         *
+         * Шпаргалка по регулярным выражениям
+         * https://www.exlab.net/tools/sheets/regexp.html
+         */
 
         Pattern pattern = Pattern.compile(regEx);
         System.out.println("=> " + pattern.matcher(str).matches());

@@ -24,6 +24,7 @@ public class A03_CollectionGroups {
         // Строка для сканирования, чтобы найти шаблон
         String str = "Крещение Киевской Руси произошло в 988 году! Не так ли?";
         String pattern = "(.*)(\\d{3})(.*)";
+//        String pattern = "(((.*)(\\d{3}))(.*))";
 
         // Создание Pattern объекта
         Pattern r = Pattern.compile(pattern);
@@ -38,6 +39,8 @@ public class A03_CollectionGroups {
             System.out.println("Найдено значение group(1): \"" + m.group(1) + "\"");
             System.out.println("Найдено значение group(2): \"" + m.group(2) + "\"");
             System.out.println("Найдено значение group(3): \"" + m.group(3) + "\"");
+//            System.out.println("Найдено значение group(4): \"" + m.group(4) + "\"");
+//            System.out.println("Найдено значение group(5): \"" + m.group(5) + "\"");
         }else {
             System.out.println("НЕ СОВПАДАЕТ");
         }

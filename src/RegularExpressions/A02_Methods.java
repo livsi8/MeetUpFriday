@@ -1,6 +1,5 @@
 package RegularExpressions;
 
-import java.io.Console;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
@@ -15,8 +14,8 @@ public class A02_Methods {
          * возвращает исходное строковое представление регулярного выражения,
          * из которого был создан объект Pattern:
          */
-//        Pattern pattern = Pattern.compile("abc");
-//        System.out.println(pattern.pattern());  //"abc"
+        pattern = Pattern.compile("abc");
+        System.out.println(pattern.pattern());  //"abc"
 
 
         /** static boolean matches(String regex, CharSequence input)
@@ -106,12 +105,12 @@ public class A02_Methods {
         /** public int start()
          * Возврат начального индекса к предыдущему совпадению.
          */
-        String str = "Егор Алла Александр Голованов";
-        Pattern p = Pattern.compile("А*а");
-        matcher = p.matcher(str);
-        while (matcher.find()) {
-            System.out.println("\"" + matcher.start() + "\"");
-        }
+//        String str = "Егор Алла Александр Голованов";
+//        Pattern p = Pattern.compile("А*а");
+//        matcher = p.matcher(str);
+//        while (matcher.find()) {
+//            System.out.println("\"" + matcher.start() + "\"");
+//        }
 
         /* ~~~~~~~ Основные методы класса PatternSyntaxException ~~~~~~~~~~~ */
 

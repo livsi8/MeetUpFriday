@@ -22,6 +22,7 @@ public class A06_Tasks {
 //        regEx = ".+";
 //         regEx = "\\w+@\\w+.\\w+";
 //
+        // oidhfvo shdfv
 
         // hexidecimal color
 
